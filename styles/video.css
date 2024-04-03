@@ -7,6 +7,20 @@
 
 .video-thumbnail {
   margin-bottom: 12px;
+  position: relative;
+}
+
+.video-time {
+  position: absolute;
+  color: white;
+  background-color: black;
+  bottom: 8px;
+  right: 6px;
+  border-radius: 4px;
+  padding: 4px;
+  font-weight: 500;
+  font-family: "Roboto", "Arial";
+  font-size: 12px;
 }
 
 .thumbnail {
