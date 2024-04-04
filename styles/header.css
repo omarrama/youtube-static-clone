@@ -17,12 +17,14 @@
 }
 
 .hamburger-menu {
+  cursor: pointer;
   height: 24px;
   margin: 0 24px;
 }
 
 .youtube-logo {
   height: 20px;
+  cursor: pointer;
 }
 
 .middle-section {
@@ -58,11 +60,9 @@
 }
 
 .search-button {
+  position: relative;
   height: 40px;
   width: 67px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: rgb(240, 240, 240);
   cursor: pointer;
   border: 1px solid #cccccc;
@@ -70,6 +70,44 @@
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   margin-right: 11px;
+}
+
+.search-button,
+.voice-search-button,
+.upload-icon-container,
+.youtube-apps-icon-container,
+.notifications-icon-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-button .tooltip,
+.voice-search-button .tooltip,
+.upload-icon-container .tooltip,
+.youtube-apps-icon-container .tooltip,
+.notifications-icon-container .tooltip {
+  font-family: "Roboto", "Arial";
+  position: absolute;
+  bottom: -45px;
+  color: white;
+  background-color: gray;
+  border-radius: 2px;
+  padding: 6px 12px;
+  font-size: 10px;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: opacity 400ms;
+}
+
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip,
+.upload-icon-container:hover .tooltip,
+.youtube-apps-icon-container:hover .tooltip,
+.notifications-icon-container:hover .tooltip {
+  opacity: 1;
 }
 
 .search-icon {
@@ -80,9 +118,6 @@
   background-color: rgb(240, 240, 240);
   height: 40px;
   width: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 50%;
   border: none;
   cursor: pointer;
@@ -105,16 +140,16 @@
   flex-shrink: 0;
 }
 
+.right-section > * {
+  cursor: pointer;
+}
+
 .upload-icon {
   height: 24px;
 }
 
 .youtube-apps-icon {
   height: 24px;
-}
-
-.notifications-icon-container {
-  position: relative;
 }
 
 .notifications-count {
