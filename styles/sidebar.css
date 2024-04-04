@@ -26,9 +26,19 @@
 .sidebar-link img {
   height: 30px;
   margin-bottom: 4px;
+  transition: filter 100ms ease;
+}
+
+.sidebar-link:hover img {
+  filter: invert(13%) sepia(61%) saturate(6482%) hue-rotate(357deg)
+    brightness(116%) contrast(121%);
 }
 
 .sidebar-link div {
   font-size: 10px;
   text-align: center;
+}
+
+.sidebar-link:hover div {
+  font-weight: bold;
 }
