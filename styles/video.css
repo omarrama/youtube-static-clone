@@ -33,6 +33,52 @@
   grid-template-columns: 50px 1fr;
 }
 
+.channel-picture {
+  align-self: self-start;
+  position: relative;
+  display: inline-block;
+}
+
+.channel-overview {
+  position: absolute;
+  bottom: -100px;
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.418);
+  opacity: 0;
+  border-radius: 8px;
+  pointer-events: none;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  padding: 14px;
+  z-index: 50;
+  transition: opacity 0.4s ease;
+}
+
+.channel-overview img {
+  border-radius: 50%;
+}
+
+.overview-details {
+  display: flex;
+  flex-direction: column;
+  margin-left: 12px;
+  row-gap: 7px;
+}
+
+.channel-picture:hover .channel-overview {
+  opacity: 1;
+}
+
+.overview-name {
+  font-weight: bold;
+}
+
+.overview-subs {
+  color: grey;
+}
+
 .profile-picture {
   width: 36px;
   border-radius: 50%;
