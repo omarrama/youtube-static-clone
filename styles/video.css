@@ -45,6 +45,11 @@
   margin-bottom: 8px;
 }
 
+.video-info a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .video-author,
 .video-stats {
   font-size: 12px;
